@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex">
+<title>Redirection – G2SL Drop</title>
+<style>
+body{font-family:Inter,Arial,sans-serif;max-width:760px;margin:60px auto;padding:0 20px;line-height:1.6;color:#1b1b2f}
+</style>
+<script>
+  // Retour de l'autorisation Twitch vers le serveur local de G2SL Drop.
+  // Destination FIXE : jamais une adresse lue dans les paramètres de l'URL.
+  // La chaîne de requête (code, state, scope, error…) est reprise telle quelle.
+  (function () {
+    var DESTINATION = "http://localhost:8000/oauth/twitch/callback";
+    window.location.replace(DESTINATION + window.location.search);
+  })();
+</script>
+</head>
+<body>
+<p>Redirection en cours…</p>
+<noscript><p>JavaScript est désactivé : la redirection automatique vers G2SL Drop ne peut pas se faire. Active JavaScript puis recommence la connexion.</p></noscript>
+</body>
+</html>
